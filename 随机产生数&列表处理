@@ -1,0 +1,17 @@
+# 随机产生某个班级 30 人的分数
+# 请计算成绩低于平均分的学生人数，并将该班级学生成绩从高到低排序并输出。
+import random
+
+score =[]
+for i in range(30):
+   score.append(random.randint(0,100))
+print(score)
+count = 0
+for i in score:
+   if i <(sum(score)/len(score)):
+      count+=1
+score.sort(reverse=True)
+print('低于平均分的人数有',count)
+print('成绩从高到低的排列:',score)
+
+
